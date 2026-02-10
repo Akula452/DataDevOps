@@ -4,11 +4,11 @@ import os
 import sys
 from pathlib import Path
 
-# Add src directory to path
+# Add src directory to path (must be before importing local modules)
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
-import pytest
-from cli.config import Config
+import pytest  # noqa: E402
+from cli.config import Config  # noqa: E402
 
 
 @pytest.fixture
