@@ -37,7 +37,7 @@ def import_data(ctx: click.Context, source: str, format: str) -> None:
 @click.pass_context
 def export_data(ctx: click.Context, destination: str, format: str) -> None:
     """Export data to destination.
-    
+
     Args:
         destination: Export destination path
         format: Data format

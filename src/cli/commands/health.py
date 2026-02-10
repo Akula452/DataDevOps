@@ -3,7 +3,6 @@
 import click
 import requests
 from cli.logger import setup_logging
-from cli.config import get_config
 
 logger = setup_logging(__name__)
 
