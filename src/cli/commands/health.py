@@ -30,10 +30,7 @@ def api(ctx: click.Context) -> None:
     """Check API health."""
     config = ctx.obj["config"]
     try:
-        response = requests.get(
-            f"{config.api_base_url}/health",
-            timeout=config.timeout
-        )
+        response = requests.get(f"{config.api_base_url}/health", timeout=config.timeout)
         if response.status_code == 200:
             click.echo("✓ API is healthy")
         else:

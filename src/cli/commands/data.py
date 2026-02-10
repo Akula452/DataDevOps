@@ -24,7 +24,9 @@ def import_data(ctx: click.Context, source: str, format: str) -> None:
         format: Data format
     """
     config = ctx.obj["config"]
-    logger.info(f"Importing data from {source} (format: {format}) in {config.env} environment")
+    logger.info(
+        f"Importing data from {source} (format: {format}) in {config.env} environment"
+    )
     click.echo(f"Importing data from: {source}")
     click.echo(f"Format: {format}")
     click.echo(f"Environment: {config.env}")
@@ -43,7 +45,9 @@ def export_data(ctx: click.Context, destination: str, format: str) -> None:
         format: Data format
     """
     config = ctx.obj["config"]
-    logger.info(f"Exporting data to {destination} (format: {format}) in {config.env} environment")
+    logger.info(
+        f"Exporting data to {destination} (format: {format}) in {config.env} environment"
+    )
     click.echo(f"Exporting data to: {destination}")
     click.echo(f"Format: {format}")
     click.echo(f"Environment: {config.env}")

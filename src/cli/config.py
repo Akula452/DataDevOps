@@ -31,7 +31,9 @@ class Config:
     def _set_config(self) -> None:
         """Set configuration based on environment."""
         self.debug = self.env in ["dev", "test"]
-        self.log_level = os.getenv("LOG_LEVEL", "INFO" if self.env == "prod" else "DEBUG")
+        self.log_level = os.getenv(
+            "LOG_LEVEL", "INFO" if self.env == "prod" else "DEBUG"
+        )
         self.api_base_url = os.getenv("API_BASE_URL", "http://localhost:8000")
         self.timeout = int(os.getenv("REQUEST_TIMEOUT", "30"))
         self.max_retries = int(os.getenv("MAX_RETRIES", "3"))

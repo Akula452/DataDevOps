@@ -7,7 +7,9 @@ from typing import Optional
 from cli.config import get_config
 
 
-def setup_logging(name: Optional[str] = None, level: Optional[str] = None) -> logging.Logger:
+def setup_logging(
+    name: Optional[str] = None, level: Optional[str] = None
+) -> logging.Logger:
     """Setup logging configuration.
 
     Args:

@@ -28,7 +28,9 @@ def show(ctx: click.Context) -> None:
 
 
 @config.command()
-@click.option("--env", type=click.Choice(["dev", "test", "prod"]), help="Switch environment")
+@click.option(
+    "--env", type=click.Choice(["dev", "test", "prod"]), help="Switch environment"
+)
 @click.pass_context
 def switch(ctx: click.Context, env: str) -> None:
     """Switch environment."""
