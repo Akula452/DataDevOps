@@ -35,7 +35,7 @@ def switch(ctx: click.Context, env: str) -> None:
     if not env:
         click.echo("Please specify an environment: --env {dev|test|prod}")
         return
-    
+
     cfg = get_config(env)
     logger.info(f"Switched to {env} environment")
     click.echo(f"✓ Switched to {env} environment")

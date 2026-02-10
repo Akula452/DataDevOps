@@ -25,7 +25,7 @@ def cli(ctx: click.Context, env: str, debug: bool) -> None:
     ctx.ensure_object(dict)
     ctx.obj["config"] = config
     ctx.obj["debug"] = debug
-    
+
     if debug:
         logger.setLevel("DEBUG")
         logger.debug(f"Debug mode enabled. Environment: {env}")

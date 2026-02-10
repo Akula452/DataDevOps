@@ -1,7 +1,5 @@
 """Tests for configuration module."""
 
-import os
-import pytest
 from cli.config import Config, get_config
 
 

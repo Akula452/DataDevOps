@@ -12,7 +12,7 @@ class Config:
 
     def __init__(self, env: Optional[str] = None):
         """Initialize configuration.
-        
+
         Args:
             env: Environment name (dev, test, prod). Defaults to ENV variable or 'dev'.
         """

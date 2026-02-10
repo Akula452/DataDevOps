@@ -18,7 +18,7 @@ def data() -> None:
 @click.pass_context
 def import_data(ctx: click.Context, source: str, format: str) -> None:
     """Import data from source.
-    
+
     Args:
         source: Data source path or URL
         format: Data format
